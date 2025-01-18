@@ -141,9 +141,52 @@ p {
   font-weight: bold;
   box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2),
     -8px -8px 15px rgba(255, 255, 255, 0.2);
+  cursor: pointer;
 }
 
 /* Projects Grid */
 .projects-grid {
   display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  transition: all 0.3s ease-in-out;
+}
+
+.project-card {
+  background-color: var(--bg-color);
+  padding: 25px;
+  text-align: center;
+  border-radius: 15px;
+  font-weight: bold;
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2),
+    -8px -8px 15px rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  margin-bottom: 15px;
+}
+
+.project-card .project-link {
+  font-size: 1.1rem;
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-card .project-link:hover {
+  color: var(--secondary-color);
 }
