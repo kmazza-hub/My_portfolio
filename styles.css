@@ -1,116 +1,149 @@
 /* General Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Roboto', sans-serif;
-    background: #181818; /* Deep grayish black background */
-    color: #eaeaea; /* Light gray text for contrast */
-    line-height: 1.6;
-  }
-  
-  /* Container for consistent layout */
-  .container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
-  /* Header Section */
-  header {
-    text-align: center;
-    background-color: #0d7377; /* Cool teal for tech feel */
-    color: white;
-    padding: 80px 0;
-    border-bottom: 2px solid #0a5a54;
-  }
-  
-  header .profile-pic {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease;
-  }
-  
-  header h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
-  
-  header .tagline {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-  }
-  
-  header .cta-button {
-    padding: 12px 25px;
-    background-color: #eaeaea;
-    color: #0d7377; /* Cool teal text */
-    font-size: 1.1rem;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background-color 0.3s, transform 0.3s;
-  }
-  
-  header .cta-button:hover {
-    background-color: #0d7377;
-    color: white;
-    transform: scale(1.1); /* Slightly grows on hover */
-  }
-  
-  /* Section Styles */
-  .section {
-    padding: 80px 0;
-    background-color: #181818; /* Dark background */
-    margin-bottom: 40px;
-  }
-  
-  h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #0d7377; /* Teal accent for headings */
-    text-transform: uppercase;
-    font-weight: 700;
-  }
-  
-  p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #ccc; /* Light grey text */
-  }
-  
-  /* Skills Grid with neumorphism effect */
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 20px;
-  }
-  
-  .skill {
-    background-color: #202020; /* Dark grey background */
-    color: white;
-    padding: 25px;
-    text-align: center;
-    border-radius: 15px;
-    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2), -8px -8px 15px rgba(255, 255, 255, 0.2); /* Neumorphism effect */
-    font-weight: bold;
-    transition: all 0.3s ease;
-  }
-  
-  .skill:hover {
-    transform: translateY(-10px);
-    box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.2), -12px -12px 20px rgba(255, 255, 255, 0.2); /* Raised effect */
-  }
-  
-  /* Projects Grid with subtle shadow and transition */
-  .projects-grid {
-    display: grid;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Theme Variables */
+.light-theme {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --accent-color: #0d7377;
+  --secondary-color: #ffa500; /* Light orange accent */
+}
+
+.dark-theme {
+  --bg-color: #181818;
+  --text-color: #eaeaea;
+  --accent-color: #0d7377;
+  --secondary-color: #ff6347; /* Tomato color */
+}
+
+/* Container for consistent layout */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header Section */
+header {
+  text-align: center;
+  color: var(--bg-color);
+  padding: 80px 0;
+  border-bottom: 5px solid var(--secondary-color);
+  background-image: url("assets/background.jpg"); /* Reference the background image */
+  background-size: cover; /* Make sure the image covers the header */
+  background-position: center center; /* Center the image */
+  position: relative;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.4
+  ); /* Dark overlay to improve text contrast */
+  z-index: 1;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  z-index: 2;
+  position: relative;
+}
+
+header .tagline {
+  font-size: 1.2rem;
+  z-index: 2;
+  position: relative;
+}
+
+header .cta-button {
+  padding: 12px 25px;
+  background-color: var(--bg-color);
+  color: var(--accent-color);
+  font-size: 1.1rem;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.3s;
+  z-index: 2;
+  position: relative;
+}
+
+header .cta-button:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+}
+
+header .theme-toggle {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 2;
+  position: relative;
+}
+
+header .theme-toggle:hover {
+  background-color: var(--bg-color);
+  color: var(--accent-color);
+}
+
+/* Section Styles */
+.section {
+  padding: 80px 0;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--accent-color);
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.skill {
+  background-color: var(--bg-color);
+  padding: 25px;
+  text-align: center;
+  border-radius: 15px;
+  font-weight: bold;
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2),
+    -8px -8px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+}
