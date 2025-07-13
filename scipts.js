@@ -13,7 +13,7 @@ themeToggle.addEventListener("click", () => {
 });
 
 // Load and Render Projects
-fetch("data.json")
+fetch("/data.json")
   .then((res) => res.json())
   .then((data) => {
     const projectGrid = document.querySelector(".projects-grid");
