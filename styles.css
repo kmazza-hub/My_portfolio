@@ -190,3 +190,20 @@ p {
 .project-card .project-link:hover {
   color: var(--secondary-color);
 }
+
+.project-tags {
+  margin: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.project-tag {
+  background-color: var(--secondary-color);
+  color: var(--bg-color);
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  text-transform: uppercase;
+}

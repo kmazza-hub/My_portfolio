@@ -1,15 +1,44 @@
 {
-  "skills": ["JavaScript", "React", "Node.js", "CSS", "Python", "MongoDB"],
+  "skills": [
+    "JavaScript", "React", "Node.js", "Express", "MongoDB",
+    "CSS", "Python", "HTML", "JWT", "Git", "Netlify", "Google Cloud"
+  ],
   "projects": [
     {
-      "title": "Project One",
-      "description": "A full-stack web application built with React, Node.js, and MongoDB.",
-      "link": "https://github.com/kmazza-hub/se_project_spots"
+      "title": "Soothing Baby App",
+      "description": "A full-stack app to calm infants with music, GIFs, and custom uploads. Includes authentication, timers, and favorites.",
+      "tags": ["React", "Node.js", "Express", "MongoDB", "JWT"],
+      "link": "https://github.com/kmazza-hub/soothing-baby-app"
     },
     {
-      "title": "Project Two",
-      "description": "A mobile app developed with React Native for task management.",
+      "title": "WTWR (Weather Wardrobe)",
+      "description": "A responsive weather-based wardrobe planner with secure auth, item ownership, and like features.",
+      "tags": ["React", "Express", "MongoDB", "JWT"],
+      "link": "https://github.com/kmazza-hub/se_project_react"
+    },
+    {
+      "title": "WTWR API",
+      "description": "RESTful API backend for WTWR app with token-based auth, route protection, and MongoDB integration.",
+      "tags": ["Express", "MongoDB", "JWT", "REST"],
+      "link": "https://github.com/kmazza-hub/se_project_express"
+    },
+    {
+      "title": "Coffee Shop Landing Page",
+      "description": "A responsive, beautifully styled multi-section landing page with animations and scroll behavior.",
+      "tags": ["HTML", "CSS", "JavaScript"],
       "link": "https://github.com/kmazza-hub/se_project_coffeeshop"
+    },
+    {
+      "title": "Todo App",
+      "description": "A full CRUD app for task management with filter, search, and drag-and-drop functionality.",
+      "tags": ["React", "Node.js", "MongoDB"],
+      "link": "https://github.com/kmazza-hub/se_project_todo-app"
+    },
+    {
+      "title": "Spots Social Map",
+      "description": "Location-based map app for sharing and discovering cool spots. Authentication and custom markers included.",
+      "tags": ["React", "Mapbox", "Node.js", "Express"],
+      "link": "https://github.com/kmazza-hub/se_project_spots"
     }
   ],
   "contact": {
