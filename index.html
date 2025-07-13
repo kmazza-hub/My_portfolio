@@ -3,38 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Keith Mazza - Software Engineer Portfolio</title>
+    <title>Keith Mazza – Software Engineer Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body class="dark-theme">
-    <!-- Header Section -->
+    <!-- Sticky Navigation -->
+    <nav class="navbar">
+      <div class="container nav-container">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a
+          href="/Keith_Mazza_Sorftware_Engineer.pdf"
+          download
+          class="resume-button"
+          >📄 Resume</a
+        >
+        <button id="theme-toggle" class="theme-toggle">🌙</button>
+      </div>
+    </nav>
+
+    <!-- Header -->
     <header>
       <div class="container">
         <h1>Keith Mazza</h1>
         <p class="tagline">Software Engineer | Full-Stack Developer</p>
         <a href="#projects" class="cta-button">View Projects</a>
-        <button id="theme-toggle" class="theme-toggle">🌙</button>
       </div>
     </header>
 
-    <!-- About Section -->
+    <!-- About -->
     <section id="about" class="section">
       <div class="container">
         <h2>About Me</h2>
         <p>
-          I'm a software engineer who loves tackling complex problems and
-          building scalable, efficient applications. When I'm not coding, you
-          can find me enjoying the ocean and soaking up the thrill of adventure.
-          My family is my anchor—whether we're exploring the great outdoors or
-          just enjoying quality time together. Of course, Dodger, my dog, is
-          always by my side, adding a little extra fun to every adventure! Life
-          is all about balance, and I strive to bring that same energy to both
-          work and play.
+          I'm a full-stack software engineer who loves turning complex problems
+          into clean, scalable solutions. I build secure, user-friendly
+          applications using technologies like React, Node.js, Express, and
+          MongoDB—always with a focus on performance and real-world impact.
+        </p>
+        <p>
+          My journey into tech was fueled by curiosity and a desire to create
+          tools that improve people's lives. I recently completed an intensive
+          full-stack bootcamp while working full-time and becoming a first-time
+          dad—so I know how to balance priorities, stay focused, and deliver
+          results under pressure.
+        </p>
+        <p>
+          When I’m not coding, you’ll find me by the ocean with my family (and
+          my dog, Dodger), exploring, adventuring, and recharging. I bring that
+          same energy and enthusiasm to my work—whether collaborating with a
+          team or deep in problem-solving mode.
         </p>
       </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- Skills -->
     <section id="skills" class="section">
       <div class="container">
         <h2>Skills</h2>
@@ -54,17 +80,18 @@
       </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Projects -->
     <section id="projects" class="section">
       <div class="container">
         <h2>Projects</h2>
-        <div class="projects-grid">
-          <!-- Project cards will be dynamically inserted here via script.js -->
-        </div>
+        <!-- Filter bar (buttons injected by JS) -->
+        <div id="filter-bar" class="filter-bar"></div>
+        <!-- Cards injected by JS -->
+        <div id="projects-grid" class="projects-grid"></div>
       </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact -->
     <section id="contact" class="section">
       <div class="container">
         <h2>Contact</h2>
@@ -72,7 +99,9 @@
           Feel free to reach out via email —
           <a href="mailto:kmazza2006@yahoo.com">kmazza2006@yahoo.com</a> or
           connect with me on
-          <a href="https://www.linkedin.com/in/keith-mazza" target="_blank"
+          <a
+            href="https://www.linkedin.com/in/keith-mazza"
+            target="_blank"
             >LinkedIn</a
           >.
         </p>
@@ -83,6 +112,7 @@
     <footer>
       <p>&copy; 2024 Keith Mazza. All Rights Reserved.</p>
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>

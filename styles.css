@@ -10,6 +10,7 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 /* Theme Variables */
@@ -17,22 +18,65 @@ body {
   --bg-color: #ffffff;
   --text-color: #000000;
   --accent-color: #0d7377;
-  --secondary-color: #ffa500; /* Light orange accent */
+  --secondary-color: #ffa500;
 }
 
 .dark-theme {
   --bg-color: #181818;
   --text-color: #eaeaea;
   --accent-color: #0d7377;
-  --secondary-color: #ff6347; /* Tomato color */
+  --secondary-color: #ff6347;
 }
 
-/* Container for consistent layout */
+/* Container */
 .container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+/* Sticky Navigation */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-color);
+  padding: 10px 20px;
+  z-index: 999;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.navbar a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: var(--secondary-color);
+}
+
+.resume-button {
+  padding: 8px 14px;
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.resume-button:hover {
+  background-color: var(--bg-color);
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
 }
 
 /* Header Section */
@@ -41,9 +85,9 @@ header {
   color: var(--bg-color);
   padding: 80px 0;
   border-bottom: 5px solid var(--secondary-color);
-  background-image: url("assets/background.jpg"); /* Reference the background image */
-  background-size: cover; /* Make sure the image covers the header */
-  background-position: center center; /* Center the image */
+  background-image: url("assets/background.jpg");
+  background-size: cover;
+  background-position: center center;
   position: relative;
 }
 
@@ -54,24 +98,19 @@ header::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.4
-  ); /* Dark overlay to improve text contrast */
+  background-color: rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
 
 header h1 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 6vw, 3rem);
   margin-bottom: 10px;
   z-index: 2;
   position: relative;
 }
 
 header .tagline {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 3vw, 1.5rem);
   z-index: 2;
   position: relative;
 }
@@ -112,18 +151,18 @@ header .theme-toggle:hover {
 
 /* Section Styles */
 .section {
-  padding: 80px 0;
+  padding: 60px 20px;
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
   margin-bottom: 20px;
   color: var(--accent-color);
   text-transform: uppercase;
 }
 
 p {
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 2vw, 1.1rem);
 }
 
 /* Skills Grid */
@@ -206,4 +245,35 @@ p {
   font-size: 0.9rem;
   border-radius: 10px;
   text-transform: uppercase;
+}
+
+/* Filter Bar */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.filter-button {
+  padding: 8px 14px;
+  border-radius: 20px;
+  background-color: var(--bg-color);
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-button:hover,
+.filter-button.active {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
 }
