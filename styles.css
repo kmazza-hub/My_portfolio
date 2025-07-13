@@ -81,14 +81,18 @@ body {
 
 /* Header Section */
 header {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   color: var(--bg-color);
-  padding: 80px 0;
   border-bottom: 5px solid var(--secondary-color);
   background-image: url("assets/background.jpg");
   background-size: cover;
   background-position: center center;
   position: relative;
+  padding: 40px 20px;
 }
 
 header::before {
@@ -102,20 +106,25 @@ header::before {
   z-index: 1;
 }
 
-header h1 {
-  font-size: clamp(2rem, 6vw, 3rem);
-  margin-bottom: 10px;
+header .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
   z-index: 2;
   position: relative;
+}
+
+header h1 {
+  font-size: clamp(2rem, 6vw, 3rem);
+  margin: 0;
 }
 
 header .tagline {
   font-size: clamp(1rem, 3vw, 1.5rem);
-  z-index: 2;
-  position: relative;
 }
 
-header .cta-button {
+.cta-button {
   padding: 12px 25px;
   background-color: var(--bg-color);
   color: var(--accent-color);
@@ -123,16 +132,15 @@ header .cta-button {
   text-decoration: none;
   border-radius: 8px;
   transition: background-color 0.3s, transform 0.3s;
-  z-index: 2;
-  position: relative;
 }
 
-header .cta-button:hover {
+.cta-button:hover {
   background-color: var(--accent-color);
   color: var(--bg-color);
+  transform: scale(1.05);
 }
 
-header .theme-toggle {
+.theme-toggle {
   margin-top: 20px;
   padding: 10px 20px;
   background-color: var(--accent-color);
@@ -144,7 +152,7 @@ header .theme-toggle {
   position: relative;
 }
 
-header .theme-toggle:hover {
+.theme-toggle:hover {
   background-color: var(--bg-color);
   color: var(--accent-color);
 }
