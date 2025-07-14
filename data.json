@@ -38,7 +38,7 @@
       "title": "Spots Social Map",
       "description": "Location-based map app for sharing and discovering cool spots. Authentication and custom markers included.",
       "tags": ["React", "Mapbox", "Node.js", "Express"],
-      "link": "https://github.com/kmazza-hub/se_project_spots"
+      "link": "https://github.com/kmazza-hub/se_projects_spots"
     }
   ],
   "contact": {
