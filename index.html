@@ -1,80 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Keith Mazza – Software Engineer Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-
-  <body class="dark-theme">
-    <!-- Sticky Navigation -->
-    <nav class="navbar">
-      <div class="container nav-container">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Keith Mazza – Portfolio</title>
+  <meta name="description" content="Keith Mazza – Full-Stack Software Engineer portfolio" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="dark-theme">
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a class="brand" href="#top">Keith Mazza</a>
+      <div class="nav-links">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
-        <button id="theme-toggle" class="theme-toggle">🌙</button>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <!-- Header -->
-    <header>
-      <div class="container">
-        <h1>Keith Mazza</h1>
-        <p class="tagline">Software Engineer | Full-Stack Developer</p>
-        <a href="#projects" class="cta-button">View Projects</a>
+  <header id="top" class="hero">
+    <div class="container">
+      <h1>Full-Stack Software Engineer</h1>
+      <p>React • Node.js • Express • MongoDB • JWT • Netlify • Cloud</p>
+      <div class="hero-actions">
+        <a class="btn" href="#projects">See Projects</a>
+        <a class="btn secondary" href="#contact">Get in Touch</a>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <!-- About -->
+  <main>
     <section id="about" class="section">
       <div class="container">
-        <h2>About Me</h2>
+        <h2>About</h2>
         <p>
-          I'm a full-stack software engineer who loves turning complex problems
-          into clean, scalable solutions. I build secure, user-friendly
-          applications using technologies like React, Node.js, Express, and
-          MongoDB—always with a focus on performance and real-world impact.
-        </p>
-        <p>
-          My journey into tech was fueled by curiosity and a desire to create
-          tools that improve people's lives. I recently completed an intensive
-          full-stack bootcamp while working full-time and becoming a first-time
-          dad—so I know how to balance priorities, stay focused, and deliver
-          results under pressure.
-        </p>
-        <p>
-          When I’m not coding, you’ll find me by the ocean with my family (and
-          my dog, Dodger), exploring, adventuring, and recharging. I bring that
-          same energy and enthusiasm to my work—whether collaborating with a
-          team or deep in problem-solving mode.
+          I build secure, scalable web apps with modern JavaScript. Recent work includes the
+          <em>Travel First</em> app (live weather + curated travel tips) and the <em>Soothing Baby App</em>
+          (full-stack with auth, uploads, timers). I care about clean UX, performance, and DX.
         </p>
       </div>
     </section>
 
-    <!-- Skills -->
-    <section id="skills" class="section">
+    <section id="skills" class="section alt">
       <div class="container">
         <h2>Skills</h2>
-        <div class="skills-grid">
-          <div class="skill">JavaScript</div>
-          <div class="skill">React</div>
-          <div class="skill">Node.js</div>
-          <div class="skill">CSS</div>
-          <div class="skill">Python</div>
-          <div class="skill">MongoDB</div>
-          <div class="skill">Django</div>
-          <div class="skill">SQL</div>
-          <div class="skill">Debugging</div>
-          <div class="skill">UI/UX Design</div>
-          <div class="skill">Front/Back-End Integration</div>
-        </div>
+        <ul id="skills-list" class="chips"></ul>
       </div>
     </section>
 
-    <!-- Projects -->
     <section id="projects" class="section">
       <div class="container">
         <h2>Projects</h2>
@@ -83,26 +59,21 @@
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="section">
+    <section id="contact" class="section alt">
       <div class="container">
         <h2>Contact</h2>
-        <p>
-          Feel free to reach out via email —
-          <a href="mailto:kmazza2006@yahoo.com">kmazza2006@yahoo.com</a> or
-          connect with me on
-          <a href="https://www.linkedin.com/in/keith-mazza" target="_blank"
-            >LinkedIn</a
-          >.
-        </p>
+        <p>Email: <a href="mailto:kmazza2006@gmail.com">kmazza2006@gmail.com</a></p>
+        <p>LinkedIn: <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/keith-mazza">linkedin.com/in/keith-mazza</a></p>
       </div>
     </section>
+  </main>
 
-    <!-- Footer -->
-    <footer>
-      <p>&copy; 2024 Keith Mazza. All Rights Reserved.</p>
-    </footer>
+  <footer class="footer">
+    <div class="container">
+      <small>© <span id="year"></span> Keith Mazza. All rights reserved.</small>
+    </div>
+  </footer>
 
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js" defer></script>
+</body>
 </html>

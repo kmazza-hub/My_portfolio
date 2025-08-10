@@ -1,48 +1,53 @@
 {
   "skills": [
-    "JavaScript", "React", "Node.js", "Express", "MongoDB",
-    "CSS", "Python", "HTML", "JWT", "Git", "Netlify", "Google Cloud"
+    "JavaScript",
+    "React",
+    "Node.js",
+    "Express",
+    "MongoDB",
+    "JWT",
+    "HTML",
+    "CSS",
+    "Git",
+    "GitHub",
+    "Netlify",
+    "Cloud"
   ],
   "projects": [
     {
-      "title": "Soothing Baby App",
-      "description": "A full-stack app to calm infants with music, GIFs, and custom uploads. Includes authentication, timers, and favorites.",
-      "tags": ["React", "Node.js", "Express", "MongoDB", "JWT"],
-      "link": "https://github.com/kmazza-hub/soothing-baby-app"
+      "title": "Travel First",
+      "description": "Travel tips and essentials with live weather, dark mode, and links.",
+      "tags": ["React", "Vite", "Netlify"],
+      "liveUrl": "https://travel-first-bali.netlify.app",
+      "repoUrl": "https://github.com/kmazza-hub/travel-first"
     },
     {
-      "title": "WTWR (Weather Wardrobe)",
-      "description": "A responsive weather-based wardrobe planner with secure auth, item ownership, and like features.",
+      "title": "Soothing Baby App",
+      "description": "Full-stack app to calm infants with music, GIFs, uploads, and timers. Includes JWT auth.",
+      "tags": ["React", "Node.js", "Express", "MongoDB", "JWT"],
+      "repoUrl": "https://github.com/kmazza-hub/soothing-baby-app"
+    },
+    {
+      "title": "WTWR (React)",
+      "description": "Weather-based wardrobe with secure auth, item ownership, and likes.",
       "tags": ["React", "Express", "MongoDB", "JWT"],
-      "link": "https://github.com/kmazza-hub/se_project_react"
+      "repoUrl": "https://github.com/kmazza-hub/se_project_react"
     },
     {
       "title": "WTWR API",
-      "description": "RESTful API backend for WTWR app with token-based auth, route protection, and MongoDB integration.",
+      "description": "RESTful API backend with token-based auth, route protection, and MongoDB.",
       "tags": ["Express", "MongoDB", "JWT", "REST"],
-      "link": "https://github.com/kmazza-hub/se_project_express"
+      "repoUrl": "https://github.com/kmazza-hub/se_project_express"
     },
     {
-      "title": "Coffee Shop Landing Page",
-      "description": "A responsive, beautifully styled multi-section landing page with animations and scroll behavior.",
+      "title": "Coffee Shop Landing",
+      "description": "Responsive multi-section landing page with clean CSS and JS.",
       "tags": ["HTML", "CSS", "JavaScript"],
-      "link": "https://github.com/kmazza-hub/se_project_coffeeshop"
-    },
-    {
-      "title": "Todo App",
-      "description": "A full CRUD app for task management with filter, search, and drag-and-drop functionality.",
-      "tags": ["React", "Node.js", "MongoDB"],
-      "link": "https://github.com/kmazza-hub/se_project_todo-app"
-    },
-    {
-      "title": "Spots Social Map",
-      "description": "Location-based map app for sharing and discovering cool spots. Authentication and custom markers included.",
-      "tags": ["React", "Mapbox", "Node.js", "Express"],
-      "link": "https://github.com/kmazza-hub/se_projects_spots"
+      "repoUrl": "https://github.com/kmazza-hub/se_project_coffeeshop"
     }
   ],
   "contact": {
-    "email": "kmazza2006@yahoo.com",
+    "email": "kmazza2006@gmail.com",
     "linkedin": "https://www.linkedin.com/in/keith-mazza"
   }
 }

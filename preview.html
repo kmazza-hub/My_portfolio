@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Live Preview</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="dark-theme">
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html#projects">← Back to Projects</a>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+    </div>
+  </nav>
+
+  <main class="preview-wrap container">
+    <div class="preview-header">
+      <h1 class="preview-title" id="preview-title">Live Preview</h1>
+      <a id="open-new" class="btn" target="_blank" rel="noopener noreferrer">Open in New Tab</a>
+    </div>
+    <div class="iframe-ratio">
+      <iframe id="preview-frame" loading="lazy" allow="clipboard-write; fullscreen"></iframe>
+    </div>
+  </main>
+
+  <script>
+    // Theme toggle
+    const themeToggle = document.getElementById("theme-toggle");
+    const body = document.body;
+    const savedTheme = localStorage.getItem("theme") || "dark-theme";
+    body.classList.add(savedTheme);
+    themeToggle.textContent = savedTheme === "dark-theme" ? "🌙" : "☀️";
+    themeToggle.addEventListener("click", () => {
+      const isDark = body.classList.contains("dark-theme");
+      body.classList.toggle("dark-theme", !isDark);
+      body.classList.toggle("light-theme", isDark);
+      localStorage.setItem("theme", isDark ? "light-theme" : "dark-theme");
+      themeToggle.textContent = isDark ? "☀️" : "🌙";
+    });
+
+    // Params
+    const params = new URLSearchParams(location.search);
+    const title = params.get("title") || "Live Preview";
+    const src = params.get("src") || "";
+    document.getElementById("preview-title").textContent = title;
+    document.getElementById("preview-frame").src = src;
+    const openNew = document.getElementById("open-new");
+    openNew.href = src || "#";
+  </script>
+</body>
+</html>
