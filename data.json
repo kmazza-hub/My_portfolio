@@ -23,26 +23,30 @@
     },
     {
       "title": "Soothing Baby App",
-      "description": "Full-stack app to calm infants with music, GIFs, uploads, and timers. Includes JWT auth.",
+      "description": "Full-stack app to calm infants with music, GIFs, uploads, timers, and JWT auth.",
       "tags": ["React", "Node.js", "Express", "MongoDB", "JWT"],
+      "liveUrl": "https://soothingbabyapp.netlify.app",
       "repoUrl": "https://github.com/kmazza-hub/soothing-baby-app"
     },
     {
       "title": "WTWR (React)",
       "description": "Weather-based wardrobe with secure auth, item ownership, and likes.",
       "tags": ["React", "Express", "MongoDB", "JWT"],
+      "liveUrl": "https://YOUR-WTWR-REACT-LIVE-URL",
       "repoUrl": "https://github.com/kmazza-hub/se_project_react"
     },
     {
       "title": "WTWR API",
-      "description": "RESTful API backend with token-based auth, route protection, and MongoDB.",
+      "description": "RESTful API backend with token-based auth, celebrate validation, and MongoDB.",
       "tags": ["Express", "MongoDB", "JWT", "REST"],
+      "liveUrl": "https://YOUR-WTWR-API-LIVE-URL",
       "repoUrl": "https://github.com/kmazza-hub/se_project_express"
     },
     {
       "title": "Coffee Shop Landing",
       "description": "Responsive multi-section landing page with clean CSS and JS.",
       "tags": ["HTML", "CSS", "JavaScript"],
+      "liveUrl": "https://YOUR-COFFEE-SHOP-LIVE-URL",
       "repoUrl": "https://github.com/kmazza-hub/se_project_coffeeshop"
     }
   ],
