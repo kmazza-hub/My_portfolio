@@ -49,8 +49,7 @@ body {
 .nav-cta.small { padding: 7px 10px; border-radius: 10px; border: 1px solid var(--accent-color); color: var(--accent-color); font-weight: 700; }
 .nav-cta.small:hover { background: var(--accent-color); color: var(--bg-color); }
 
-/* ===== Hero (centered) ===== */
-/* ===== Hero (centered, blurred overlay, mobile-tuned) ===== */
+/* ===== Hero (centered, no blur) ===== */
 .hero {
   position: relative;
   background-size: cover;
@@ -63,54 +62,35 @@ body {
   text-align: center;
   color: #fff;
 }
-
-/* subtle vignette over the background for legibility */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(120% 100% at 50% 0%, rgba(0,0,0,.25) 0%, rgba(0,0,0,0) 45%)
-    ,linear-gradient(to bottom, rgba(0,0,0,.12), rgba(0,0,0,.28));
-  pointer-events: none;
-}
-
 .hero-content {
-  position: relative; /* sit above the vignette */
+  position: relative;
   width: min(90%, 900px);
-  background: rgba(0,0,0,0.32);
-  backdrop-filter: blur(6px) saturate(115%);
-  -webkit-backdrop-filter: blur(6px) saturate(115%);
+  background: transparent;                 /* no tint */
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   padding: 48px 40px;
   border-radius: 16px;
-  box-shadow: 0 12px 40px rgba(0,0,0,.35);
-  text-shadow: 0 2px 6px rgba(0,0,0,.5);
+  box-shadow: none;
+  text-shadow: 0 2px 6px rgba(0,0,0,.45);  /* legibility on bright spots */
 }
-
 .hero h1 { margin: 0 0 10px; font-size: clamp(28px, 5vw, 48px); }
 .hero p  { margin: 0 0 18px; opacity: .95; }
 .hero-actions { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
 
-/* tighten + narrow on tablets */
+/* tighten on smaller screens */
 @media (max-width: 900px) {
   .hero-content { width: min(86%, 720px); padding: 40px 32px; }
 }
-
-/* even narrower + comfy padding on phones */
 @media (max-width: 640px) {
   .hero { min-height: 60vh; padding: 64px 12px; }
   .hero-content { width: min(92%, 520px); padding: 28px 22px; border-radius: 14px; }
   .hero h1 { font-size: clamp(26px, 8vw, 36px); }
 }
 
-
 /* ===== Sections ===== */
 .section { padding: 56px 0; }
 .section.alt { background: var(--card); }
 .section h2 { margin: 0 0 18px; font-size: clamp(22px, 3.8vw, 32px); }
-
-/* ===== About (photo removed) ===== */
-.about-container { /* simple, text-only container now */ }
 
 /* ===== Chips / Skills ===== */
 .chips { list-style: none; padding: 0; margin: 0; display: flex; gap: 10px; flex-wrap: wrap; }
@@ -156,7 +136,7 @@ body {
 .btn.secondary { border-color: var(--secondary-color); color: var(--secondary-color); }
 .btn.secondary:hover { background: var(--secondary-color); color: var(--bg-color); }
 
-/* ===== Preview Page Styles (used by preview.html) ===== */
+/* ===== Preview Page Styles ===== */
 .preview-wrap { max-width: 1200px; margin: 0 auto; padding: 16px; }
 .preview-header { display: flex; gap: 10px; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; }
 .preview-actions { display: flex; gap: 10px; align-items: center; }

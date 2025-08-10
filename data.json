@@ -43,9 +43,9 @@
       "repoUrl": "https://github.com/kmazza-hub/se_project_express"
     },
     {
-      "title": "Coffee Shop Landing",
-      "description": "Responsive multi-section landing page with clean CSS and JS.",
-      "tags": ["HTML", "CSS", "JavaScript"],
+      "title": "Triple Peaks Coffee Shop",
+      "description": "Semantic HTML + modern CSS layout (BEM). Early project from TripleTen.",
+      "tags": ["HTML", "CSS", "BEM"],
       "liveUrl": "https://YOUR-COFFEE-SHOP-LIVE-URL",
       "repoUrl": "https://github.com/kmazza-hub/se_project_coffeeshop"
     }

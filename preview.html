@@ -10,7 +10,11 @@
   <nav class="navbar">
     <div class="container nav-container">
       <a href="index.html#projects">← Back to Projects</a>
-      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      <div class="preview-actions">
+        <a class="btn nav-cta small" href="Keith_Mazza_Software_Engineer.pdf" download>Download Resume</a>
+        <button id="copy-link" class="btn small" type="button">Copy Link</button>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      </div>
     </div>
   </nav>
 
@@ -23,6 +27,9 @@
       <iframe id="preview-frame" loading="lazy" allow="clipboard-write; fullscreen"></iframe>
     </div>
   </main>
+
+  <!-- Toast for copy confirmation -->
+  <div id="toast" class="toast">Link copied to clipboard</div>
 
   <script>
     // Theme toggle
@@ -47,6 +54,29 @@
     document.getElementById("preview-frame").src = src;
     const openNew = document.getElementById("open-new");
     openNew.href = src || "#";
+
+    // Copy link button
+    const copyBtn = document.getElementById("copy-link");
+    const toast = document.getElementById("toast");
+    const showToast = (msg) => {
+      toast.textContent = msg;
+      toast.classList.add("show");
+      setTimeout(() => toast.classList.remove("show"), 1500);
+    };
+    copyBtn.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(location.href);
+        showToast("Link copied to clipboard");
+      } catch (e) {
+        const sel = document.createElement("textarea");
+        sel.value = location.href;
+        document.body.appendChild(sel);
+        sel.select();
+        document.execCommand("copy");
+        document.body.removeChild(sel);
+        showToast("Link copied");
+      }
+    });
   </script>
 </body>
 </html>
