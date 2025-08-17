@@ -32,7 +32,7 @@
       "title": "WTWR (React)",
       "description": "Weather-based wardrobe with secure auth, item ownership, and likes.",
       "tags": ["React", "Express", "MongoDB", "JWT"],
-      "liveUrl": "https://kmazza-hub.github.io/se_project_react/",
+      "liveUrl": "https://kmazza-hub.github.io/se_project_express/",
       "repoUrl": "https://github.com/kmazza-hub/se_project_react"
     },
     {
@@ -56,7 +56,7 @@
       "liveUrl": "https://kmazza-hub.github.io/se_project_todo-app/",
       "repoUrl": "https://github.com/kmazza-hub/se_project_todo-app"
     }
-    
+
   ],
   "contact": {
     "email": "kmazza2006@gmail.com",
