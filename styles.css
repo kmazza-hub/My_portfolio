@@ -1,4 +1,4 @@
-/* ===== Base / Theme ===== */
+/* ===== Base / Theme ===== */ 
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
 body {
@@ -157,3 +157,26 @@ body {
 
 /* ===== Footer ===== */
 .footer { padding: 24px 0; border-top: 1px solid var(--border); text-align: center; }
+
+/* ===== Link Styling ===== */
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color .2s ease;
+}
+a:hover {
+  color: var(--secondary-color);
+}
+
+/* White links in dark mode for nav, footer, and contact */
+.dark-theme .nav-links a,
+.dark-theme .footer a,
+.dark-theme #contact a {
+  color: #ffffff;
+}
+
+.dark-theme .nav-links a:hover,
+.dark-theme .footer a:hover,
+.dark-theme #contact a:hover {
+  color: #cccccc;
+}
